@@ -1,0 +1,38 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { display: flex; flex-direction: column; height: 100vh; font-family: 'Segoe UI', Arial, sans-serif; background-color: #1e1e1e; color: #fff; overflow: hidden; }
+
+/* Üst Menü Paneli */
+.app-header { display: flex; gap: 20px; align-items: center; padding: 10px 20px; background-color: #2d2d2d; border-bottom: 2px solid #3c3c3c; z-index: 1000; }
+.logo { font-size: 16px; font-weight: bold; white-space: nowrap; }
+.logo span { color: #007acc; }
+.control-group { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: bold; color: #d4d4d4; }
+
+/* Butonlar ve Girdiler */
+.btn { padding: 6px 12px; background-color: #007acc; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 13px; white-space: nowrap; }
+.btn:hover { background-color: #005999; }
+.save-btn { background-color: #28a745; }
+.save-btn:hover { background-color: #218838; }
+.clear-btn { background-color: #dc3545; }
+.clear-btn:hover { background-color: #c82333; }
+
+input[type="file"] { color: #d4d4d4; font-size: 13px; }
+input[type="text"] { padding: 5px 8px; font-size: 13px; border: 1px solid #555; background: #1e1e1e; color: #fff; border-radius: 4px; width: 160px; outline: none; }
+input[type="text"]:focus { border-color: #007acc; }
+
+/* Sekmeler Çubuğu */
+.tabs-bar { display: flex; background-color: #252526; border-bottom: 1px solid #3c3c3c; padding: 4px 10px 0 10px; overflow-x: auto; }
+.tab { display: flex; align-items: center; background-color: #2d2d2d; color: #969696; padding: 6px 15px; font-size: 13px; border: 1px solid #3c3c3c; border-bottom: none; margin-right: 3px; border-top-left-radius: 4px; border-top-right-radius: 4px; cursor: pointer; white-space: nowrap; }
+.tab.active { background-color: #1e1e1e; color: #fff; font-weight: bold; border-bottom: 1px solid #1e1e1e; margin-bottom: -1px; }
+.tab .close-btn { margin-left: 10px; color: #717171; font-weight: bold; cursor: pointer; }
+.tab .close-btn:hover { color: #ff4d4d; }
+
+/* Yan Yana Çalışma Alanı */
+.workspace { display: flex; flex: 1; overflow: hidden; }
+.box { flex: 1; display: flex; flex-direction: column; height: 100%; }
+.header { background-color: #252526; padding: 8px 15px; font-size: 13px; font-weight: bold; color: #d4d4d4; border-bottom: 1px solid #3c3c3c; text-transform: uppercase; }
+textarea { flex: 1; background-color: #1e1e1e; color: #d4d4d4; font-family: 'Consolas', monospace; font-size: 16px; line-height: 1.5; padding: 15px; border: none; resize: none; outline: none; }
+iframe { flex: 1; background-color: #ffffff; border: none; }
+
+/* Alt Bar */
+.status-bar { display: flex; justify-content: flex-end; background-color: #252526; border-top: 1px solid #3c3c3c; padding: 5px 20px; font-size: 12px; color: #858585; }
+.status-bar div { margin-left: 20px; }

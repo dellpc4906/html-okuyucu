@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeViewer Pro - Çoklu Dil Okuyucu ve Önizleyici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Üst Menü Paneli (İlk Tasarım Tonlarında) -->
+    <div class="app-header">
+        <div class="logo">CodeViewer <span>Pro</span>HTML</div>
+        
+        <!-- 📂 Dosya Seçme Girişi (Engellenemeyen Yerleşik HTML Elementi) -->
+        <div class="control-group">
+            <label>📂 Dosya Seç:</label>
+            <input type="file" id="file-chooser" multiple>
+        </div>
+
+        <!-- ➕ Yeni Proje / Sayfa Alanı Açma -->
+        <div class="control-group" style="border-left: 2px solid #3c3c3c; padding-left: 15px;">
+            <label>➕ Yeni Sayfa:</label>
+            <input type="text" id="new-file-name" placeholder="index.html veya kod.py">
+            <button class="btn" id="add-page-btn">Oluştur</button>
+        </div>
+        
+        <!-- Sağ Yönetim Butonları -->
+        <div style="margin-left: auto; display: flex; gap: 8px;">
+            <button class="btn save-btn" id="save-active-btn">💾 Aktif Olanı Kaydet</button>
+            <button class="btn save-btn" id="save-all-btn">🗂️ Tümünü Kaydet</button>
+            <button class="btn clear-btn" id="clear-btn">❌ Tümünü Kapat</button>
+            <button class="btn" id="run-btn">▶ Çalıştır</button>
+        </div>
+    </div>
+
+    <!-- Sekmeler Çubuğu -->
+    <div class="tabs-bar" id="tabs-container"></div>
+
+    <!-- Yan Yana Düzen Çalışma Alanı -->
+    <main class="workspace">
+        <div class="box">
+            <div class="header">📝 KOD EDİTÖRÜ</div>
+            <textarea id="editor" spellcheck="false" placeholder="Yukarıdan dosya seçin veya yeni bir sayfa ismi yazıp 'Oluştur' butonuna basın..."></textarea>
+        </div>
+        <div class="box" style="border-left: 2px solid #3c3c3c;">
+            <div class="header" id="preview-title">👁️ CANLI ÖNİZLEME</div>
+            <iframe id="preview" sandbox="allow-scripts allow-popups allow-downloads allow-forms allow-top-navigation allow-same-origin"></iframe>
+        </div>
+    </main>
+
+    <!-- Alt Bilgi Çubuğu -->
+    <footer class="status-bar">
+        <div id="mode-text" style="font-weight: bold; color: #0078d7;">Mod: Boş</div>
+        <div id="char-text">Karakter: 0</div>
+        <div>UTF-8</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
